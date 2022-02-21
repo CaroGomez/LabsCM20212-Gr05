@@ -1,3 +1,28 @@
 <resources>
     <string name="app_name">Labs20212-Gr05</string>
+    <string name="str_en">Inglés</string>
+    <string name="str_es">Español</string>
+    <string name="str_pt">Portugués</string>
+    <string-array name="idiomas">
+        <item>@string/str_en</item>
+        <item>@string/str_es</item>
+        <item>@string/str_pt</item>
+    </string-array>
+    <string name="personal_Information">Información personal</string>
+    <string name="contact_Information">Información de contacto</string>
+    <string name="first_name">Nombres: </string>
+    <string name="last_name">Apellidos: </string>
+    <string name="gender">Sexo: </string>
+    <string name="female_gender">Mujer</string>
+    <string name="male_gender">Hombre</string>
+    <string name="birthdate">Fecha de cumpleaños: </string>
+    <string name="scholarship">Grado de escolaridad: </string>
+    <string name="phone">Teléfono: </string>
+    <string name="address">Dirección: </string>
+    <string name="email">Correo: </string>
+    <string name="country">País: </string>
+    <string name="city">Ciudad: </string>
+    <string name="btn_change">Cambiar</string>
+    <string name="btn_next">Siguiente</string>
+
 </resources>
