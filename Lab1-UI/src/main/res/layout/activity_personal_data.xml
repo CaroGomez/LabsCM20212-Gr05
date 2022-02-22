@@ -84,15 +84,15 @@
         android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView">
-        <DatePicker
+<!--        <DatePicker
             android:id="@+id/dtpBirthDay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:datePickerMode="spinner"
-            android:calendarViewShown="false"/>
-    <!--    <TextView
+            android:calendarViewShown="false"/>-->
+     <TextView
             android:id="@+id/txtViewDate"
-            android:layout_width="120dp"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:paddingTop="20dp"
             android:paddingEnd="10dp"
@@ -105,7 +105,7 @@
             android:id="@+id/btnDate"
             android:layout_width="31dp"
             android:layout_height="31dp"
-            android:background="@drawable/ic_calendar" />-->
+            android:background="@drawable/ic_calendar" />
     </LinearLayout>
 
     <TextView

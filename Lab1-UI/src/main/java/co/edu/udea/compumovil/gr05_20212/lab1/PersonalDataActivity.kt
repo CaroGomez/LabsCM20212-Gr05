@@ -20,15 +20,15 @@ class PersonalDataActivity : AppCompatActivity() {
         actionBar!!.title = "Personal Data"
         actionBar.setDisplayHomeAsUpEnabled(true)
 
-        val datePicker = findViewById<DatePicker>(R.id.dtpBirthDay)
+/*        val datePicker = findViewById<DatePicker>(R.id.dtpBirthDay)
         val today = Calendar.getInstance()
         datePicker.init(today.get(Calendar.YEAR), today.get(Calendar.MONTH),
             today.get(Calendar.DAY_OF_MONTH)){ view, year, month, day ->
                 val month = month + 1
                 val msg = "You Selected: $day/$month/$year"
                 Toast.makeText(this@PersonalDataActivity, msg, Toast.LENGTH_SHORT).show()
-            }
-/*        // get the references from layout file
+            }*/
+       // get the references from layout file
          txtDate = findViewById<TextView>(R.id.txtViewDate)
          btnDate = findViewById<Button>(R.id.btnDate)
 
@@ -58,7 +58,7 @@ class PersonalDataActivity : AppCompatActivity() {
 
             }
 
-        })*/
+        })
     }
     private fun updateDateInView() {
         val myFormat = "MM/dd/yyyy" // mention the format you need
