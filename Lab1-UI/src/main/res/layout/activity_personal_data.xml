@@ -32,7 +32,7 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="379dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+
         android:hint="Last Name"
         app:helperText="Required*"
         app:helperTextTextColor="@color/design_default_color_error"
@@ -48,19 +48,21 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <RadioGroup
+        android:id="@+id/radioGroup"
         android:layout_width="175dp"
         android:layout_height="104dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
 
+        android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtInputLastname">
+
         <TextView
             android:id="@+id/hdGender"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Gender:"
-            />
+            android:text="Gender:" />
+
         <RadioButton
             android:id="@+id/radioButton2"
             android:layout_width="match_parent"
@@ -73,5 +75,47 @@
             android:layout_height="wrap_content"
             android:text="Famale" />
     </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+        <DatePicker
+            android:id="@+id/dtpBirthDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:datePickerMode="spinner"
+            android:calendarViewShown="false"/>
+    <!--    <TextView
+            android:id="@+id/txtViewDate"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="20dp"
+            android:paddingStart="10dp"
+            android:textAlignment="textStart"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btnDate"
+            android:layout_width="31dp"
+            android:layout_height="31dp"
+            android:background="@drawable/ic_calendar" />-->
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:text="Birth Day:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
