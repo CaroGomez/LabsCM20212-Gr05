@@ -25,6 +25,29 @@
     <string name="btn_change">Cambiar</string>
     <string name="btn_next">Siguiente</string>
 
+    <string-array name="cities_array">
+        <item>Bogotá</item>
+        <item>Medellín</item>
+        <item>Cali</item>
+        <item>Barranquilla</item>
+        <item>Cartagena de Indias</item>
+        <item>Soacha</item>
+        <item>Cúcuta</item>
+        <item>Soledad</item>
+        <item>Bucaramanga</item>
+        <item>Bello</item>
+        <item>Villavicencio</item>
+        <item>Ibagué</item>
+        <item>Santa Marta</item>
+        <item>Valledupar</item>
+        <item>Manizales</item>
+        <item>Pereira</item>
+        <item>Monteria</item>
+        <item>Neiva</item>
+        <item>Pasto</item>
+        <item>Armenia</item>
+    </string-array>
+
     <string-array name="countries_array">
         <item>Argentina</item>
         <item>Bolivia</item>
@@ -46,6 +69,8 @@
         <item>Uruguay</item>
         <item>Venezuela</item>
     </string-array>
+
+
 
 
 </resources>

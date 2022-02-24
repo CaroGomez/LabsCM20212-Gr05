@@ -58,7 +58,6 @@
             android:inputType="textWebEmailAddress" />
     </com.google.android.material.textfield.TextInputLayout>
 
-
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/txtInputCountry"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -66,22 +65,24 @@
         android:layout_height="wrap_content"
 
         android:layout_marginStart="12dp"
-        android:layout_marginTop="31dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="12dp"
         android:hint="País"
         app:helperText="Required*"
         app:helperTextTextColor="@color/design_default_color_error"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtInputEmail"
         app:layout_editor_absoluteX="12dp"
         app:startIconDrawable="@android:drawable/ic_menu_mapmode">
 
         <com.google.android.material.textfield.MaterialAutoCompleteTextView
-            android:id="@+id/txtCountry"
+            android:id="@+id/actv_country"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textShortMessage" />
+            android:inputType="textShortMessage"
+            />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -102,14 +103,14 @@
         app:startIconDrawable="@android:drawable/ic_menu_myplaces">
 
         <com.google.android.material.textfield.MaterialAutoCompleteTextView
-            android:id="@+id/txtCity"
+            android:id="@+id/actv_City"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textShortMessage" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/txtInputAddres"
+        android:id="@+id/txtInputAddress"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -126,21 +127,21 @@
         app:startIconDrawable="@android:drawable/ic_menu_mylocation">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/txtAdress"
+            android:id="@+id/txtAddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textShortMessage" />
+            android:inputType="textVisiblePassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/buttonSend"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="134dp"
+        android:layout_marginTop="76dp"
         android:text="Crear Contacto"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtInputAddress" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
