@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
 
         val personalDataActv = findViewById<Button>(R.id.personalDataActivityBtn)
         personalDataActv.setOnClickListener{
-            val PersonalDataActivityIntent = Intent(this,PersonalDataActivity::class.java)
+            val PersonalDataActivityIntent = Intent(this,ContactDataActivity::class.java)
             startActivity(PersonalDataActivityIntent)
         }
     }

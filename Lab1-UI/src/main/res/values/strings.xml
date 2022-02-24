@@ -1,4 +1,4 @@
-<resources>
+    <resources>
     <string name="app_name">Labs20212-Gr05</string>
     <string name="str_en">Inglés</string>
     <string name="str_es">Español</string>
@@ -24,5 +24,28 @@
     <string name="city">Ciudad: </string>
     <string name="btn_change">Cambiar</string>
     <string name="btn_next">Siguiente</string>
+
+    <string-array name="countries_array">
+        <item>Argentina</item>
+        <item>Bolivia</item>
+        <item>Brasil</item>
+        <item>Chile</item>
+        <item>Colombia</item>
+        <item>Cuba</item>
+        <item>Ecuador</item>
+        <item>El Salvador</item>
+        <item>Guatemala</item>
+        <item>Haití</item>
+        <item>Honduras</item>
+        <item>México</item>
+        <item>Nicaragua</item>
+        <item>Panamá</item>
+        <item>Paraguay</item>
+        <item>Perú</item>
+        <item>Republica Dominicana</item>
+        <item>Uruguay</item>
+        <item>Venezuela</item>
+    </string-array>
+
 
 </resources>
