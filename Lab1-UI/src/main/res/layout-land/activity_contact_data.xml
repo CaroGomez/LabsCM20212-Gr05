@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ContactDataActivity">
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtInputAddress"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="285dp"
+        android:layout_height="68dp"
+
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="68dp"
+        android:hint="Dirección"
+        app:helperTextTextColor="@color/design_default_color_error"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_editor_absoluteX="12dp"
+        app:startIconDrawable="@android:drawable/ic_menu_mylocation">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtAddress"
+            android:layout_width="283dp"
+            android:layout_height="50dp"
+            android:inputType="textVisiblePassword"
+            tools:layout_editor_absoluteY="5dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtInputCity"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="290dp"
+        android:layout_height="77dp"
+
+        android:layout_marginEnd="24dp"
+        android:hint="Ciudad"
+        app:helperTextTextColor="@color/design_default_color_error"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSend"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtInputEmail"
+        app:layout_constraintVertical_bias="0.409"
+        app:layout_editor_absoluteX="12dp"
+        app:startIconDrawable="@android:drawable/ic_menu_myplaces">
+
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+            android:id="@+id/actv_City"
+            android:layout_width="284dp"
+            android:layout_height="43dp"
+            android:inputType="textShortMessage"
+            tools:layout_editor_absoluteX="381dp"
+            tools:layout_editor_absoluteY="220dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtInputEmail"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="297dp"
+        android:layout_height="84dp"
+
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="20dp"
+        android:hint="Correo"
+        app:helperText="Required*"
+        app:helperTextTextColor="@color/design_default_color_error"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSend"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.304"
+        app:layout_editor_absoluteX="12dp"
+        app:startIconDrawable="@android:drawable/ic_menu_send">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:inputType="textWebEmailAddress"
+            tools:layout_editor_absoluteY="5dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtInputCellphone"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="287dp"
+        android:layout_height="89dp"
+
+        android:layout_marginStart="40dp"
+        android:hint="Télefono"
+        app:helperText="Required*"
+        app:helperTextTextColor="@color/design_default_color_error"
+        app:layout_constraintBottom_toTopOf="@+id/txtInputAddress"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.327"
+        app:layout_editor_absoluteX="12dp"
+        app:startIconDrawable="@android:drawable/ic_menu_call">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtCellphone"
+            android:layout_width="278dp"
+            android:layout_height="54dp"
+            android:inputType="phone" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtInputCountry"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="282dp"
+        android:layout_height="77dp"
+
+        android:layout_marginStart="40dp"
+        android:hint="País"
+        app:helperText="Required*"
+        app:helperTextTextColor="@color/design_default_color_error"
+        app:layout_constraintBottom_toTopOf="@+id/txtInputAddress"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtInputCellphone"
+        app:layout_editor_absoluteX="12dp"
+        app:startIconDrawable="@android:drawable/ic_menu_mapmode">
+
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+            android:id="@+id/actv_country"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:inputType="textShortMessage"
+            tools:layout_editor_absoluteY="5dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/buttonSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="76dp"
+        android:text="Crear Contacto"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
