@@ -1,6 +1,7 @@
 package co.edu.udea.compumovil.gr05_20212.lab1
 
 import android.app.DatePickerDialog
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -17,17 +18,11 @@ class PersonalDataActivity : AppCompatActivity() {
         setContentView(R.layout.activity_personal_data)
         val actionBar = supportActionBar
 
+        loadNextButton();
+        loadGradeSpinner();
         actionBar!!.title = "Personal Data"
-        actionBar.setDisplayHomeAsUpEnabled(true)
+       /* actionBar.setDisplayHomeAsUpEnabled(true)*/
 
-/*        val datePicker = findViewById<DatePicker>(R.id.dtpBirthDay)
-        val today = Calendar.getInstance()
-        datePicker.init(today.get(Calendar.YEAR), today.get(Calendar.MONTH),
-            today.get(Calendar.DAY_OF_MONTH)){ view, year, month, day ->
-                val month = month + 1
-                val msg = "You Selected: $day/$month/$year"
-                Toast.makeText(this@PersonalDataActivity, msg, Toast.LENGTH_SHORT).show()
-            }*/
        // get the references from layout file
          txtDate = findViewById<TextView>(R.id.txtViewDate)
          btnDate = findViewById<Button>(R.id.btnDate)
@@ -54,8 +49,6 @@ class PersonalDataActivity : AppCompatActivity() {
                     cal.get(Calendar.YEAR),
                     cal.get(Calendar.MONTH),
                     cal.get(Calendar.DAY_OF_MONTH)).show()
-
-
             }
 
         })
@@ -64,5 +57,28 @@ class PersonalDataActivity : AppCompatActivity() {
         val myFormat = "MM/dd/yyyy" // mention the format you need
         val sdf = SimpleDateFormat(myFormat, Locale.US)
         txtDate!!.text = sdf.format(cal.getTime())
+    }
+
+    private fun loadNextButton(){
+        val personalDataActv = findViewById<Button>(R.id.personalDataActivityBtn)
+        personalDataActv.setOnClickListener{
+            val PersonalDataActivityIntent = Intent(this,ContactDataActivity::class.java)
+            startActivity(PersonalDataActivityIntent)
+        }
+    }
+
+    private fun loadGradeSpinner(){
+        val spinner: Spinner = findViewById(R.id.gradeSpinner)
+
+        ArrayAdapter.createFromResource(
+            this,
+            R.array.grades_array,
+            android.R.layout.simple_spinner_item
+        ).also { adapter ->
+
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+
+            spinner.adapter = adapter
+        }
     }
 }

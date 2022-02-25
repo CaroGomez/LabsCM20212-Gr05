@@ -84,20 +84,15 @@
         android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView">
-<!--        <DatePicker
-            android:id="@+id/dtpBirthDay"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:datePickerMode="spinner"
-            android:calendarViewShown="false"/>-->
-     <TextView
+
+        <TextView
             android:id="@+id/txtViewDate"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
+            android:paddingStart="10dp"
             android:paddingTop="20dp"
             android:paddingEnd="10dp"
             android:paddingBottom="20dp"
-            android:paddingStart="10dp"
             android:textAlignment="textStart"
             android:textSize="20sp" />
 
@@ -117,5 +112,34 @@
         android:text="Birth Day:"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <Spinner
+        android:id="@+id/gradeSpinner"
+        android:layout_width="194dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtGrade" />
+
+    <TextView
+        android:id="@+id/txtGrade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:text="Grade :"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutDate" />
+    <Button
+        android:id="@+id/personalDataActivityBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="44dp"
+        android:text="Siguiente"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

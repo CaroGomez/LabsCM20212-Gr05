@@ -3,12 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Desarrollo/Proyectos/Android/Lab 1/LabsCM20212-Gr05/Lab1-UI/src/main/res/layout/activity_contact_data.xml" value="0.36666666666666664" />
         <entry key="..\:/Desarrollo/Proyectos/Android/Lab 1/LabsCM20212-Gr05/Lab1-UI/src/main/res/layout/activity_main.xml" value="0.358695652173913" />
-        <entry key="..\:/Desarrollo/Proyectos/Android/Lab 1/LabsCM20212-Gr05/Lab1-UI/src/main/res/layout/activity_personal_data.xml" value="0.5287769784172662" />
+        <entry key="..\:/Desarrollo/Proyectos/Android/Lab 1/LabsCM20212-Gr05/Lab1-UI/src/main/res/layout/activity_personal_data.xml" value="0.4" />
         <entry key="..\:/Users/caro5/Documents/Universidad/ComputacionMovil/Labs20212Gr05/Lab1-UI/src/main/res/layout/activity_main.xml" value="0.22" />
-        <entry key="..\:/Users/cayu2/OneDrive/Documentos/GitHub/LabsCM20212-Gr05/LabsCM20212-Gr05/Lab1-UI/src/main/res/layout/activity_contact_data.xml" value="0.16666666666666666" />
-        <entry key="..\:/Users/cayu2/OneDrive/Documentos/GitHub/LabsCM20212-Gr05/LabsCM20212-Gr05/Lab1-UI/src/main/res/layout/activity_main.xml" value="0.3333333333333333" />
-        <entry key="..\:/Users/cayu2/OneDrive/Documentos/GitHub/LabsCM20212-Gr05/LabsCM20212-Gr05/Lab1-UI/src/main/res/layout/activity_personal_data.xml" value="0.22" />
       </map>
     </option>
   </component>

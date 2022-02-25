@@ -69,8 +69,11 @@
         <item>Uruguay</item>
         <item>Venezuela</item>
     </string-array>
-
-
-
+            <string-array name="grades_array">
+                <item>Primaria</item>
+                <item>Secundaria</item>
+                <item>Universitaria</item>
+                <item>Otro</item>
+            </string-array>
 
 </resources>
