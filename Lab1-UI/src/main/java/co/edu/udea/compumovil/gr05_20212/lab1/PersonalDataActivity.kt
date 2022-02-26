@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.*
+import kotlinx.android.synthetic.main.activity_personal_data.*
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -13,6 +14,7 @@ class PersonalDataActivity : AppCompatActivity() {
     var cal = Calendar.getInstance()
     var txtDate: TextView?=null
     var btnDate : Button?=null
+    var language_Spinner : Spinner?=null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_personal_data)
@@ -26,6 +28,7 @@ class PersonalDataActivity : AppCompatActivity() {
        // get the references from layout file
          txtDate = findViewById<TextView>(R.id.txtViewDate)
          btnDate = findViewById<Button>(R.id.btnDate)
+         language_Spinner = findViewById(R.id.languageSpinner)
 
         txtDate!!.text = "--/--/----"
 
