@@ -2,13 +2,13 @@ package co.edu.udea.compumovil.gr05_20212.lab1
 
 import android.app.DatePickerDialog
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.*
-import kotlinx.android.synthetic.main.activity_personal_data.*
+import androidx.appcompat.app.AppCompatActivity
 import java.text.SimpleDateFormat
 import java.util.*
+import android.util.Log
 
 class PersonalDataActivity : AppCompatActivity() {
     var cal = Calendar.getInstance()
@@ -22,7 +22,7 @@ class PersonalDataActivity : AppCompatActivity() {
         setContentView(R.layout.activity_personal_data)
         setTitle(R.string.personal_Information)
 
-//        loadNextButton();
+       loadNextButton();
         loadGradeSpinner();
 
 
@@ -30,25 +30,11 @@ class PersonalDataActivity : AppCompatActivity() {
         txtDate = findViewById<TextView>(R.id.txtViewDate)
         btnDate = findViewById<Button>(R.id.btnDate)
         var lanspinner: Spinner = findViewById(R.id.languageSpinner)
-        var txtName = findViewById<TextView>(R.id.txtName)
+       /* var txtName = findViewById<TextView>(R.id.txtName)
         var txtLastName = findViewById<TextView>(R.id.txtLastName)
-        var btnNext = findViewById<Button>(R.id.personalDataActivityBtn)
+        var btnNext = findViewById<Button>(R.id.personalDataActivityBtn)*/
 
-        btnNext.setOnClickListener{
-            val name =txtName.text.toString().trim()
-            val lastName = txtLastName.text.toString().trim()
-            if(name.isEmpty() || lastName.isEmpty()){
-                if(name.isEmpty()){
-                    txtName.error = "Requerido"
-                }
-                if(lastName.isEmpty()){
-                    txtLastName.error = "Requerido"
-                }
-            }else{
-                val PersonalDataActivityIntent = Intent(this, ContactDataActivity::class.java)
-                startActivity(PersonalDataActivityIntent)
-            }
-        }
+
 
         txtDate!!.text = "--/--/----"
 
@@ -152,6 +138,50 @@ class PersonalDataActivity : AppCompatActivity() {
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
             spinner.adapter = adapter
+        }
+    }
+
+    private fun loadNextButton(){
+
+        var txtName = findViewById<TextView>(R.id.txtName)
+        var txtLastName = findViewById<TextView>(R.id.txtLastName)
+        var btnNext = findViewById<Button>(R.id.personalDataActivityBtn)
+        var rbGender = findViewById<RadioGroup>(R.id.radioGroup)
+
+
+        btnNext.setOnClickListener{
+            val name =txtName.text.toString().trim()
+            val lastName = txtLastName.text.toString().trim()
+            val gender =
+            if(name.isEmpty() || lastName.isEmpty()){
+                if(name.isEmpty()){
+                    txtName.error = "Requerido"
+                }
+                if (lastName.isEmpty()){
+                    txtLastName.error = "Requerido"
+                }
+                return@setOnClickListener
+            }else{
+                val genderSelected = rbGender.checkedRadioButtonId
+                val birthday = findViewById<TextView>(R.id.txtViewDate)
+                val grade = findViewById<Spinner>(R.id.gradeSpinner)
+                Log.i("Información Personal", "")
+                Log.i("Nombre", name)
+                Log.i("Apellido", lastName)
+                Log.i("Genero",  "No ingresada")
+                if (genderSelected==0) {
+                    Log.i("Genero", "No ingresada")
+                }
+                else{
+                    val rbGender = findViewById<RadioButton>(genderSelected)
+                    Log.i("Genero", rbGender.text.toString())
+                }
+                Log.i("Fecha de nacimiento", birthday.text.toString())
+                Log.i("Escolaridad", grade.selectedItem.toString())
+
+                val PersonalDataActivityIntent = Intent(this, ContactDataActivity::class.java)
+                startActivity(PersonalDataActivityIntent)
+            }
         }
     }
 

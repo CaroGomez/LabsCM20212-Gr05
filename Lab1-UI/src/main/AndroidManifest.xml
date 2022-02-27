@@ -8,14 +8,17 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+
         android:theme="@style/Theme.Labs20212Gr05">
+
         <activity
             android:name=".ContactDataActivity"
             android:exported="false"
             android:parentActivityName=".PersonalDataActivity" />
         <activity
             android:name=".PersonalDataActivity"
-            android:exported="true">
+            android:exported="true"
+            android:configChanges="orientation|screenSize|keyboardHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

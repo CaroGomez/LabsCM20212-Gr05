@@ -13,17 +13,15 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/txtInputName"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="379dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
+            android:layout_width="243dp"
+            android:layout_height="82dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="68dp"
             android:hint="@string/first_name"
             app:helperText="Required*"
             app:helperTextTextColor="@color/design_default_color_error"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/languageSpinner"
+            app:layout_constraintTop_toTopOf="parent"
             app:startIconDrawable="@drawable/ic_person">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -35,18 +33,16 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/txtInputLastname"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="379dp"
-            android:layout_height="wrap_content"
+            android:layout_width="276dp"
+            android:layout_height="85dp"
 
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="64dp"
             android:hint="@string/last_name"
             app:helperText="Required*"
             app:helperTextTextColor="@color/design_default_color_error"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtInputName"
+            app:layout_constraintTop_toBottomOf="@+id/languageSpinner"
             app:startIconDrawable="@drawable/ic_person">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -59,11 +55,11 @@
             android:id="@+id/radioGroup"
             android:layout_width="175dp"
             android:layout_height="104dp"
-            android:layout_marginStart="16dp"
 
-            android:layout_marginTop="16dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="32dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtInputLastname">
+            app:layout_constraintTop_toBottomOf="@+id/txtInputName">
 
             <TextView
                 android:id="@+id/hdGender"
@@ -84,50 +80,26 @@
                 android:text="@string/female_gender" />
         </RadioGroup>
 
-        <LinearLayout
-            android:id="@+id/linearLayoutDate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:orientation="horizontal"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView">
-
-            <TextView
-                android:id="@+id/txtViewDate"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:paddingStart="10dp"
-                android:paddingTop="20dp"
-                android:paddingEnd="10dp"
-                android:paddingBottom="20dp"
-                android:textAlignment="textStart"
-                android:textSize="20sp" />
-
-            <Button
-                android:id="@+id/btnDate"
-                android:layout_width="31dp"
-                android:layout_height="31dp"
-                android:background="@drawable/ic_calendar" />
-        </LinearLayout>
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="204dp"
             android:text="@string/birthdate"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+            android:textAlignment="textStart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/radioGroup"
+            app:layout_constraintTop_toBottomOf="@+id/txtInputLastname" />
 
         <Spinner
             android:id="@+id/gradeSpinner"
             android:layout_width="194dp"
             android:layout_height="26dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="20dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtGrade" />
 
@@ -135,11 +107,11 @@
             android:id="@+id/txtGrade"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="36dp"
             android:text="@string/scholarship"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayoutDate" />
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
         <Button
             android:id="@+id/personalDataActivityBtn"
@@ -154,14 +126,55 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/gradeSpinner" />
 
+
         <Spinner
             android:id="@+id/languageSpinner"
             android:layout_width="220dp"
             android:layout_height="26dp"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginEnd="32dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/linearLayoutDate"
+            android:layout_width="254dp"
+            android:layout_height="78dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="84dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.984"
+            app:layout_constraintStart_toEndOf="@+id/radioGroup"
+            app:layout_constraintTop_toBottomOf="@+id/textView">
+
+
+            <TextView
+                android:id="@+id/txtViewDate"
+                android:layout_width="198dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="192dp"
+                android:paddingStart="10dp"
+                android:paddingTop="20dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="20dp"
+                android:textAlignment="textStart"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnDate"
+            android:layout_width="31dp"
+            android:layout_height="31dp"
+            android:background="@drawable/ic_calendar"
+            app:layout_constraintBottom_toBottomOf="@+id/linearLayoutDate"
+            app:layout_constraintEnd_toEndOf="@+id/linearLayoutDate"
+            app:layout_constraintTop_toTopOf="@+id/linearLayoutDate" />
+
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
