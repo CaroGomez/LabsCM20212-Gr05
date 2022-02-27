@@ -1,147 +1,156 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ContactDataActivity">
+    android:layout_height="wrap_content">
+<!--    android:id="@+id/ContactData"-->
 
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/txtInputCellphone"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
 
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="12dp"
-        android:hint="@string/phone"
-        app:helperText="Required*"
-        app:helperTextTextColor="@color/design_default_color_error"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_editor_absoluteX="12dp"
-        app:startIconDrawable="@android:drawable/ic_menu_call">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ContactDataActivity">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/txtCellphone"
-            android:layout_width="match_parent"
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtInputCellphone"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:inputType="phone" />
-    </com.google.android.material.textfield.TextInputLayout>
+
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:hint="@string/phone"
+            app:helperText="Required*"
+            app:helperTextTextColor="@color/design_default_color_error"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_editor_absoluteX="12dp"
+            app:startIconDrawable="@android:drawable/ic_menu_call">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtCellphone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone" />
+        </com.google.android.material.textfield.TextInputLayout>
 
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/txtInputEmail"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="12dp"
-        android:hint="@string/email"
-        app:helperText="Required*"
-        app:helperTextTextColor="@color/design_default_color_error"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtInputCellphone"
-        app:layout_editor_absoluteX="12dp"
-        app:startIconDrawable="@android:drawable/ic_menu_send">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/txtEmail"
-            android:layout_width="match_parent"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtInputEmail"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:inputType="textWebEmailAddress" />
-    </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/txtInputCountry"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:hint="@string/email"
+            app:helperText="Required*"
+            app:helperTextTextColor="@color/design_default_color_error"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtInputCellphone"
+            app:layout_editor_absoluteX="12dp"
+            app:startIconDrawable="@android:drawable/ic_menu_send">
 
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="12dp"
-        android:hint="@string/country"
-        app:helperText="Required*"
-        app:helperTextTextColor="@color/design_default_color_error"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtInputEmail"
-        app:layout_editor_absoluteX="12dp"
-        app:startIconDrawable="@android:drawable/ic_menu_mapmode">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textWebEmailAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.MaterialAutoCompleteTextView
-            android:id="@+id/actv_country"
-            android:layout_width="match_parent"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtInputCountry"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:inputType="textShortMessage" />
-    </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/txtInputCity"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:hint="@string/country"
+            app:helperText="Required*"
+            app:helperTextTextColor="@color/design_default_color_error"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtInputEmail"
+            app:layout_editor_absoluteX="12dp"
+            app:startIconDrawable="@android:drawable/ic_menu_mapmode">
 
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="11dp"
-        android:layout_marginEnd="12dp"
-        android:hint="@string/city"
-        app:helperTextTextColor="@color/design_default_color_error"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtInputCountry"
-        app:layout_editor_absoluteX="12dp"
-        app:startIconDrawable="@android:drawable/ic_menu_myplaces">
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/actv_country"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textShortMessage" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.MaterialAutoCompleteTextView
-            android:id="@+id/actv_City"
-            android:layout_width="match_parent"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtInputCity"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:inputType="textShortMessage" />
-    </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/txtInputAddress"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:hint="@string/city"
+            app:helperTextTextColor="@color/design_default_color_error"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtInputCountry"
+            app:layout_editor_absoluteX="12dp"
+            app:startIconDrawable="@android:drawable/ic_menu_myplaces">
 
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="31dp"
-        android:layout_marginEnd="12dp"
-        android:hint="@string/address"
-        app:helperTextTextColor="@color/design_default_color_error"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtInputCity"
-        app:layout_editor_absoluteX="12dp"
-        app:startIconDrawable="@android:drawable/ic_menu_mylocation">
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/actv_City"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textShortMessage" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/txtAddress"
-            android:layout_width="match_parent"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtInputAddress"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:inputType="textVisiblePassword" />
-    </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
-        android:id="@+id/buttonSend"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:text="Crear Contacto"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtInputAddress" />
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:hint="@string/address"
+            app:helperTextTextColor="@color/design_default_color_error"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtInputCity"
+            app:layout_editor_absoluteX="12dp"
+            app:startIconDrawable="@android:drawable/ic_menu_mylocation">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textVisiblePassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/buttonSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:text="Crear Contacto"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtInputAddress" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+
+
