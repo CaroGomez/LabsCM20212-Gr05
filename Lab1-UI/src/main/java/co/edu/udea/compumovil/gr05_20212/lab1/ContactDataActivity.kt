@@ -2,6 +2,7 @@ package co.edu.udea.compumovil.gr05_20212.lab1
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.util.Patterns
 import android.view.inputmethod.InputBinding
 import android.widget.*
@@ -46,6 +47,8 @@ class ContactDataActivity : AppCompatActivity() {
             val phone = txtCellphone.text.toString().trim()
             val email = txtEmail.text.toString().trim()
             val country = actv_Country.text.toString().trim()
+            val address = txtAddress.text.toString().trim()
+            val city = actv_City.text.toString().trim()
 
             if (phone.isEmpty() || email.isEmpty() || !(Patterns.EMAIL_ADDRESS.matcher(email).matches()) || !resources.getStringArray(R.array.countries_array).contains(country) || country.isEmpty()){
                 if (phone.isEmpty()){
@@ -65,6 +68,23 @@ class ContactDataActivity : AppCompatActivity() {
             }
             else{
                 Toast.makeText(this, "Validation Complete", Toast.LENGTH_LONG).show()
+                Log.i("Información de Contacto", "")
+                Log.i("Teléfono", phone)
+                if (address.isEmpty()){
+                    Log.i("Dirección", "No ingresada")
+                }
+                else {
+                    Log.i("Dirección", address)
+                }
+                Log.i("Email", email)
+                Log.i("Pais", country)
+                if (city.isEmpty()){
+                    Log.i("Ciudad", "No ingresada")
+                }
+                else {
+                    Log.i("Ciudad", city)
+                }
+
 
                 return@setOnClickListener
             }
