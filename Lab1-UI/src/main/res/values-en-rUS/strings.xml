@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Labs20212-Gr05</string>
-    <string name="str_en">English</string>
-    <string name="str_es">Spanish</string>
-    <string name="str_pt">Portuguese</string>
     <string name="first_name">First Name</string>
     <string name="last_name">Last Name</string>
     <string name="gender">Gender</string>
@@ -20,4 +17,5 @@
     <string name="male_gender">Male</string>
     <string name="btn_change">Change</string>
     <string name="btn_next">Next</string>
+    <string name="select_lang">Select language</string>
 </resources>

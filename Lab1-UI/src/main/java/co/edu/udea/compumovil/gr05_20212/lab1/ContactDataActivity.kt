@@ -22,13 +22,7 @@ class ContactDataActivity : AppCompatActivity() {
 
 
         setContentView(R.layout.activity_contact_data)
-
-
-        val actionBar = supportActionBar
-        actionBar!!.title = "Contact Data"
-        actionBar.setDisplayHomeAsUpEnabled(true)
-
-
+        setTitle(R.string.contact_Information);
 
         val countries = resources.getStringArray(R.array.countries_array);
         val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, countries)
