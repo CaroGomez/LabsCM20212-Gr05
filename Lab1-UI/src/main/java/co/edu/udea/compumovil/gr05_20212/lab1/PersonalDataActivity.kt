@@ -1,20 +1,21 @@
 package co.edu.udea.compumovil.gr05_20212.lab1
 
+import android.annotation.SuppressLint
 import android.app.DatePickerDialog
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.*
-import kotlinx.android.synthetic.main.activity_personal_data.*
+import androidx.appcompat.app.AppCompatActivity
 import java.text.SimpleDateFormat
 import java.util.*
 
+
 class PersonalDataActivity : AppCompatActivity() {
-    var cal = Calendar.getInstance()
+    var cal: Calendar = Calendar.getInstance()
     var txtDate: TextView? = null
     var btnDate: Button? = null
-//    var txtLastName = findViewById<TextView>(R.id.txtInputLastname)
     lateinit var locale: Locale
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,38 +23,14 @@ class PersonalDataActivity : AppCompatActivity() {
         setContentView(R.layout.activity_personal_data)
         setTitle(R.string.personal_Information)
 
-//        loadNextButton();
-        loadGradeSpinner();
+        loadNextButton()
+        loadGradeSpinner()
 
 
         // get the references from layout file
-        txtDate = findViewById<TextView>(R.id.txtViewDate)
-        btnDate = findViewById<Button>(R.id.btnDate)
-        var lanspinner: Spinner = findViewById(R.id.languageSpinner)
-        var txtName = findViewById<TextView>(R.id.txtName)
-        var txtLastName = findViewById<TextView>(R.id.txtLastName)
-        var btnNext = findViewById<Button>(R.id.personalDataActivityBtn)
-        var dateTxt = findViewById<TextView>(R.id.txtViewDate)
-
-        btnNext.setOnClickListener{
-            val name =txtName.text.toString().trim()
-            val lastName = txtLastName.text.toString().trim()
-            val date = dateTxt.text.toString().trim()
-            if(name.isEmpty() || lastName.isEmpty() || date == "--/--/----"){
-                if(name.isEmpty()){
-                    txtName.error = "Requerido"
-                }
-                if(lastName.isEmpty()){
-                    txtLastName.error = "Requerido"
-                }
-                if (date == "--/--/----"){
-                    dateTxt.error = "Requerido"
-                }
-            }else{
-                val PersonalDataActivityIntent = Intent(this, ContactDataActivity::class.java)
-                startActivity(PersonalDataActivityIntent)
-            }
-        }
+        txtDate = findViewById(R.id.txtViewDate)
+        btnDate = findViewById(R.id.btnDate)
+        val lanspinner: Spinner = findViewById(R.id.languageSpinner)
 
         txtDate!!.text = "--/--/----"
 
@@ -141,7 +118,7 @@ class PersonalDataActivity : AppCompatActivity() {
     private fun updateDateInView() {
         val myFormat = "MM/dd/yyyy" // mention the format you need
         val sdf = SimpleDateFormat(myFormat, Locale.US)
-        txtDate!!.text = sdf.format(cal.getTime())
+        txtDate!!.text = sdf.format(cal.time)
     }
 
 
@@ -157,6 +134,55 @@ class PersonalDataActivity : AppCompatActivity() {
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
             spinner.adapter = adapter
+        }
+    }
+
+
+    @SuppressLint("CutPasteId")
+    private fun loadNextButton(){
+
+        val txtName = findViewById<TextView>(R.id.txtName)
+        val txtLastName = findViewById<TextView>(R.id.txtLastName)
+        val btnNext = findViewById<Button>(R.id.personalDataActivityBtn)
+        val rbGender = findViewById<RadioGroup>(R.id.radioGroup)
+        val dateTxt = findViewById<TextView>(R.id.txtViewDate)
+
+        btnNext.setOnClickListener{
+            val name =txtName.text.toString().trim()
+            val lastName = txtLastName.text.toString().trim()
+            val date = dateTxt.text.toString().trim()
+                if(name.isEmpty() || lastName.isEmpty() || date == "--/--/----"){
+                    if(name.isEmpty()){
+                        txtName.error = "Requerido"
+                    }
+                    if(lastName.isEmpty()){
+                        txtLastName.error = "Requerido"
+                    }
+                    if (date == "--/--/----"){
+                        dateTxt.error = "Requerido"
+                    }
+                    return@setOnClickListener
+                }
+                else{
+                    val genderSelected = rbGender.checkedRadioButtonId
+                    val birthday = findViewById<TextView>(R.id.txtViewDate)
+                    val grade = findViewById<Spinner>(R.id.gradeSpinner)
+                    Log.i("Información Personal", "")
+                    Log.i("Nombre", name)
+                    Log.i("Apellido", lastName)
+                    if (genderSelected==-1) {
+                        Log.i("Genero", "No ingresada")
+                    }
+                    else{
+                        val rbGender = findViewById<RadioButton>(genderSelected)
+                        Log.i("Genero", rbGender.text.toString())
+                    }
+                    Log.i("Fecha de nacimiento", birthday.text.toString())
+                    Log.i("Escolaridad", grade.selectedItem.toString())
+
+                    val PersonalDataActivityIntent = Intent(this, ContactDataActivity::class.java)
+                    startActivity(PersonalDataActivityIntent)
+                }
         }
     }
 
