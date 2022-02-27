@@ -4,7 +4,6 @@ import android.annotation.SuppressLint
 import android.app.DatePickerDialog
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
@@ -167,20 +166,20 @@ class PersonalDataActivity : AppCompatActivity() {
                     val genderSelected = rbGender.checkedRadioButtonId
                     val birthday = findViewById<TextView>(R.id.txtViewDate)
                     val grade = findViewById<Spinner>(R.id.gradeSpinner)
-                    Log.i("Información Personal", "")
-                    Log.i("Nombre", name)
-                    Log.i("Apellido", lastName)
+                    val PersonalDataActivityIntent = Intent(this, ContactDataActivity::class.java)
+                    val rbGender: String
+
                     if (genderSelected==-1) {
-                        Log.i("Genero", "No ingresada")
+                        rbGender="No ingresado"
                     }
                     else{
-                        val rbGender = findViewById<RadioButton>(genderSelected)
-                        Log.i("Genero", rbGender.text.toString())
+                        rbGender = findViewById<RadioButton>(genderSelected).text.toString()
                     }
-                    Log.i("Fecha de nacimiento", birthday.text.toString())
-                    Log.i("Escolaridad", grade.selectedItem.toString())
-
-                    val PersonalDataActivityIntent = Intent(this, ContactDataActivity::class.java)
+                    PersonalDataActivityIntent.putExtra("Nombre", name)
+                    PersonalDataActivityIntent.putExtra("Apellido", lastName)
+                    PersonalDataActivityIntent.putExtra("Genero", rbGender)
+                    PersonalDataActivityIntent.putExtra("Fecha de Nacimiento", birthday.text.toString())
+                    PersonalDataActivityIntent.putExtra("Escolaridad", grade.selectedItem.toString())
                     startActivity(PersonalDataActivityIntent)
                 }
         }
