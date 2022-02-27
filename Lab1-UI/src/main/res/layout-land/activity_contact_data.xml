@@ -11,14 +11,16 @@
         android:id="@+id/txtInputAddress"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="285dp"
-        android:layout_height="68dp"
+        android:layout_height="89dp"
 
-        android:layout_marginStart="40dp"
-        android:layout_marginBottom="68dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
         android:hint="Dirección"
         app:helperTextTextColor="@color/design_default_color_error"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtInputCountry"
         app:layout_editor_absoluteX="12dp"
         app:startIconDrawable="@android:drawable/ic_menu_mylocation">
 
@@ -34,15 +36,16 @@
         android:id="@+id/txtInputCity"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="290dp"
-        android:layout_height="77dp"
+        android:layout_height="89dp"
 
-        android:layout_marginEnd="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:hint="Ciudad"
         app:helperTextTextColor="@color/design_default_color_error"
-        app:layout_constraintBottom_toTopOf="@+id/buttonSend"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtInputCountry"
         app:layout_constraintTop_toBottomOf="@+id/txtInputEmail"
-        app:layout_constraintVertical_bias="0.409"
         app:layout_editor_absoluteX="12dp"
         app:startIconDrawable="@android:drawable/ic_menu_myplaces">
 
@@ -59,17 +62,17 @@
         android:id="@+id/txtInputEmail"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="297dp"
-        android:layout_height="84dp"
+        android:layout_height="89dp"
 
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:hint="Correo"
         app:helperText="Required*"
         app:helperTextTextColor="@color/design_default_color_error"
-        app:layout_constraintBottom_toTopOf="@+id/buttonSend"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtInputCellphone"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.304"
         app:layout_editor_absoluteX="12dp"
         app:startIconDrawable="@android:drawable/ic_menu_send">
 
@@ -87,14 +90,13 @@
         android:layout_width="287dp"
         android:layout_height="89dp"
 
-        android:layout_marginStart="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:hint="Télefono"
         app:helperText="Required*"
         app:helperTextTextColor="@color/design_default_color_error"
-        app:layout_constraintBottom_toTopOf="@+id/txtInputAddress"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.327"
         app:layout_editor_absoluteX="12dp"
         app:startIconDrawable="@android:drawable/ic_menu_call">
 
@@ -109,13 +111,13 @@
         android:id="@+id/txtInputCountry"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="282dp"
-        android:layout_height="77dp"
+        android:layout_height="89dp"
 
-        android:layout_marginStart="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:hint="País"
         app:helperText="Required*"
         app:helperTextTextColor="@color/design_default_color_error"
-        app:layout_constraintBottom_toTopOf="@+id/txtInputAddress"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtInputCellphone"
         app:layout_editor_absoluteX="12dp"
@@ -133,11 +135,14 @@
         android:id="@+id/buttonSend"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="80dp"
-        android:layout_marginBottom="76dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
         android:text="Crear Contacto"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtInputAddress"
+        app:layout_constraintTop_toBottomOf="@+id/txtInputCity" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
